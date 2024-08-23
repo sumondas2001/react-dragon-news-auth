@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import toast from "react-hot-toast";
 
 
 const Register = () => {
+     const { creteUser } = useContext(AuthContext);
      const handelRegister = e => {
+
           e.preventDefault();
 
           const from = new FormData(e.currentTarget);
@@ -12,6 +17,17 @@ const Register = () => {
           const email = from.get('email');
           const password = from.get('password');
           console.log(name, photoURL, email, password);
+
+          // crete User email and password
+          creteUser(email, password)
+               .then(() => {
+
+                    toast.success("Register Successfully !!")
+               })
+               .catch(error => {
+                    const errorMessage = error.message;
+                    toast.error(errorMessage)
+               })
      }
      return (
           <div>

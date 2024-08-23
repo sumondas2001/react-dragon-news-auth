@@ -1,13 +1,33 @@
 import { Link } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import toast from "react-hot-toast";
+
+
 
 
 const Login = () => {
+     const { userSignIn } = useContext(AuthContext)
      const handelLogin = e => {
           e.preventDefault();
 
           const from = new FormData(e.currentTarget);
-          console.log(from.get('email'))
+
+          const email = from.get('email');
+          const password = from.get('password');
+
+          // sign In With Email And Password
+          userSignIn(email, password)
+               .then(() => {
+                    // console.log(result.user)
+                    toast.success("Login Successfully !!")
+
+
+               })
+               .catch((error) => {
+                    toast.error(error.message)
+               })
      }
      return (
           <div>
