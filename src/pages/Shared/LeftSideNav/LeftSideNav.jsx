@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import moment from 'moment';
+import { CiCalendar } from "react-icons/ci";
+import img1 from '../../../assets/1.png'
+import img2 from '../../../assets/2.png'
+import img3 from '../../../assets/3.png'
 
 
 const LeftSideNav = () => {
@@ -22,6 +27,39 @@ const LeftSideNav = () => {
                     </NavLink>
                     )
                }
+               <div className="shadow-lg p-4">
+                    <img src={img1} alt="" />
+                    <p className="text-lg font-medium mt-5">Bayern Slams Authorities Over Flight Delay to Club World Cup</p>
+                    <div className="flex justify-between mt-4">
+                         <p className="font-medium">Sports</p>
+                         <div className="flex gap-2 items-center">
+                              <span className="text-xl"><CiCalendar /></span>
+                              <p className="text-lg ">{moment().format(" MMM D, YYYY,")}</p>
+                         </div>
+                    </div>
+               </div>
+               <div className="shadow-lg p-4">
+                    <img src={img2} alt="" />
+                    <p className="text-lg font-medium mt-5">Bayern Slams Authorities Over Flight Delay to Club World Cup</p>
+                    <div className="flex justify-between mt-4">
+                         <p className="font-medium">Sports</p>
+                         <div className="flex gap-2 items-center">
+                              <span className="text-xl"><CiCalendar /></span>
+                              <p className="text-lg ">{moment().format(" MMM D, YYYY,")}</p>
+                         </div>
+                    </div>
+               </div>
+               <div className="shadow-lg p-4">
+                    <img src={img3} alt="" />
+                    <p className="text-lg font-medium mt-5">Bayern Slams Authorities Over Flight Delay to Club World Cup</p>
+                    <div className="flex justify-between mt-4">
+                         <p className="font-medium">Sports</p>
+                         <div className="flex gap-2 items-center">
+                              <span className="text-xl"><CiCalendar /></span>
+                              <p className="text-lg ">{moment().format(" MMM D, YYYY,")}</p>
+                         </div>
+                    </div>
+               </div>
           </div>
      );
 };
