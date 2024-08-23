@@ -21,16 +21,16 @@ const RightSideNav = () => {
                <hr />
                <div className="p-6 ">
                     <h1 className="text-xl mb-6 font-semibold">Find Us On</h1>
-                    <a className="flex gap-4 items-center border p-4 text-lg font-medium rounded-t-lg" href="">
+                    <a className="flex gap-4 items-center  hover:bg-blue-900 hover:text-black border  p-4 text-lg font-medium rounded-t-lg" href="">
                          <FaFacebook className="text-blue-400"></FaFacebook>
                          Facebook
                     </a>
-                    <a className="flex gap-4 items-center border p-4 text-lg font-medium rounded-rl" href="">
+                    <a className="flex gap-4 items-center border hover:bg-sky-800 hover:text-black p-4 text-lg font-medium rounded-rl" href="">
                          <FaTwitter className="text-sky-500"></FaTwitter>
                          Twitter
                     </a>
-                    <a className="flex gap-4 items-center border p-4 text-lg font-medium rounded-b-lg" href="">
-                         <FaInstagram className="text-red-500"></FaInstagram>
+                    <a className="flex gap-4 items-center hover:bg-red-400 border p-4 text-lg font-medium rounded-b-lg hover:text-white" href="">
+                         <FaInstagram className="text-red-800  "></FaInstagram>
                          Instagram
                     </a>
                </div>

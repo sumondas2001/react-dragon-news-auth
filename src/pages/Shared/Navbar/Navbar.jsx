@@ -22,7 +22,7 @@ const Navbar = () => {
 
 
                     <button className="btn btn-accent px-6 py-0">
-                         <Link>Login</Link>
+                         <Link to={"/login"}>Login</Link>
                     </button>
                </div>
           </div>
