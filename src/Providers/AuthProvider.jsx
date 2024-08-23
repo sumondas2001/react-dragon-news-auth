@@ -8,22 +8,25 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
-
+     const [loading, setLoading] = useState(true);
      const [user, setUser] = useState(null);
 
      // crete User email and password
 
      const creteUser = (email, password) => {
+          setLoading(true);
           return createUserWithEmailAndPassword(auth, email, password)
      }
 
      // sign In With Email AndPassword
      const userSignIn = (email, password) => {
+          setLoading(true);
           return signInWithEmailAndPassword(auth, email, password)
      }
 
      // log out
      const logOut = () => {
+          setLoading(true);
           return signOut(auth)
      }
 
@@ -35,8 +38,8 @@ const AuthProvider = ({ children }) => {
      // on Auth State Changed
      const unSubscribe = useEffect(() => {
           onAuthStateChanged(auth, currentUser => {
-
                setUser(currentUser);
+               setLoading(false)
           }
 
 
@@ -52,7 +55,8 @@ const AuthProvider = ({ children }) => {
           user,
           creteUser,
           logOut,
-          userSignIn
+          userSignIn,
+          loading
 
      }
      return (

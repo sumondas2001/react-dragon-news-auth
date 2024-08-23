@@ -5,6 +5,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import News from "../pages/News/News";
 import PrivetRoutes from "./PrivetRoutes";
+import ErrorPages from "../pages/ErrorPages/ErrorPages";
 
 
 
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
      {
           path: "/",
           element: <Root></Root>,
+          errorElement: <ErrorPages></ErrorPages>,
           children: [
                {
                     path: "/",
