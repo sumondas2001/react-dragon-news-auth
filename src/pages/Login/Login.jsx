@@ -5,8 +5,6 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import toast from "react-hot-toast";
 
 
-
-
 const Login = () => {
      const location = useLocation();
      const navigate = useNavigate();

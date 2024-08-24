@@ -4,6 +4,8 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+
 const firebaseConfig = {
      apiKey: "AIzaSyDGzlupH2x40P117w8wPTyRhOq8dtTkJ_I",
      authDomain: "react-dragon-news-auth-35daf.firebaseapp.com",
